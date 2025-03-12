@@ -5,6 +5,15 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 
 # Initialize VADER
 def VaderAnalysis(news):
+    """
+    Perform sentiment analysis on a news article using VADER.
+
+    Args:
+        news (str): News article to analyze.
+
+    Returns:
+        dict: Dictionary with sentiment scores ('neg', 'neu', 'pos', 'compound')
+    """
     sia = SentimentIntensityAnalyzer()
 
     # Custom finance-related sentiment words
