@@ -48,7 +48,7 @@ def VaderAnalysis(news):
 
     # Update VADER's lexicon
     sia.lexicon.update(finance_lexicon)
-    scores = sia.polarity_scores(text)
+    scores = sia.polarity_scores(news)
     return scores
 
 """
