@@ -124,13 +124,19 @@ def SentAna(stock_symbol):
         # Decide Buy, Sell, or Neutral
         if avg_sentiment >= 0.5:
             print("\n🚀 **Signal: BUY** 🚀 (Positive sentiment)")
+            return 1 
         elif avg_sentiment <= -0.5:
             print("\n⚠️ **Signal: SELL** ⚠️ (Negative sentiment)")
+            return -1
         else:
             print("\n🔍 **Signal: NEUTRAL** 🔍 (Mixed sentiment)")
+            return 0
     else:
         print("\n❌ No news articles found. Cannot determine sentiment.")
 
 
     return avg_sentiment
 
+
+ans = SentAna("TSLA")
+print(ans)
