@@ -262,15 +262,15 @@ def fundamental_analysis(stock_code):
 
         # Generate simplified recommendation
         if score >= 75:
-            return "Strong Buy"
+            return 1
         elif score >= 55:
-            return "Buy"
+            return 0.5
         elif score >= 35:
-            return "Hold"
+            return 0
         elif score >= 20:
-            return "Sell"
+            return -0.5
         else:
-            return "Strong Sell"
+            return -1
 
     except Exception as e:
         return "Error"
