@@ -107,36 +107,36 @@ def SentAna(stock_symbol):
     scores = []  # Store sentiment scores
 
     for source, articles in news.items():
-        print(f"\n{source} News:")
+        # print(f"\n{source} News:")
         if isinstance(articles, list):
             for article in articles[:5]:  # Show only top 5
-                print(f"- {article['title']} (Score: {article['Score']})\n  Link: {article['link']}")
+                # print(f"- {article['title']} (Score: {article['Score']})\n  Link: {article['link']}")
                 scores.append(article["Score"])  # Collect sentiment scores
-        else:
-            print(articles)
+        # else:
+        #     print(articles)
 
     # Calculate average sentiment score
     avg_sentiment = sum(scores) / len(scores)
-    if scores:
+    # if scores:
         
-        print(f"\nAverage Sentiment Score: {avg_sentiment:.3f}")
+    #     # print(f"\nAverage Sentiment Score: {avg_sentiment:.3f}")
 
-        # Decide Buy, Sell, or Neutral
-        if avg_sentiment >= 0.5:
-            print("\n🚀 **Signal: BUY** 🚀 (Positive sentiment)")
-            return 1 
-        elif avg_sentiment <= -0.5:
-            print("\n⚠️ **Signal: SELL** ⚠️ (Negative sentiment)")
-            return -1
-        else:
-            print("\n🔍 **Signal: NEUTRAL** 🔍 (Mixed sentiment)")
-            return 0
-    else:
-        print("\n❌ No news articles found. Cannot determine sentiment.")
+    #     # Decide Buy, Sell, or Neutral
+    #     if avg_sentiment >= 0.5:
+    #         # print("\n🚀 **Signal: BUY** 🚀 (Positive sentiment)")
+    #         return 1 
+    #     elif avg_sentiment <= -0.5:
+    #         # print("\n⚠️ **Signal: SELL** ⚠️ (Negative sentiment)")
+    #         return -1
+    #     else:
+    #         # print("\n🔍 **Signal: NEUTRAL** 🔍 (Mixed sentiment)")
+    #         return 0
+    # else:
+    #     print("\n❌ No news articles found. Cannot determine sentiment.")
 
 
     return avg_sentiment
 
 
-ans = SentAna("TSLA")
-print(ans)
+# ans = SentAna("TSLA")
+# print(ans)
