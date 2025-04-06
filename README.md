@@ -1,6 +1,60 @@
-# Abstract
+# Event-Driven Stock Market Prediction Using Artificial Intelligence
 
-The aim of this project is to design and develop a comprehensive stock market analysis and decision-making system that integrates real-time data retrieval, advanced forecasting methods and sentiment analysis to help traders and investors make informed decisions. The inherent complexity and volatility of the stock market requires a multi-dimensional approach that goes beyond traditional analytical methods. By using a combination of technical indicators, fundamental metrics and sentiment-based analysis, this system delivers actionable insights such as price predictions, technical signals and risk management recommendations. The core of this project lies in the synthesis of predictive modeling techniques such as Long Short-Term Memory (LSTM) networks and ARIMA with sentiment analysis from financial news and social media as well as traditional financial metrics such as EPS, P/E and ROE. This integration enables a holistic approach to understanding stock market dynamics. The system forecasts short and medium-term stock prices, assesses market dynamics and trends using technical indicators such as RSI and MACD, and assesses the company's health using fundamental analysis. Sentiment analysis of financial news articles will assess market sentiment and its potential impact on stock trends. A decision engine synthesizes these inputs and generates actionable recommendations such as “Buy,” “Hold,” or “Sell,” accompanied by stop loss and target prices. 
-This project provides an innovative and adaptable framework for addressing the complexities of the stock market. By combining various methods into a unified system, it provides users with data-driven, risk-balanced decision support.
+This project implements a comprehensive stock market prediction system that combines multiple analysis techniques to provide accurate stock price predictions.
 
-Keywords : Artificial intelligence, event driven, stock, stock market, sentiment analysis, decision making, technical analysis, indicators, financial news, natural language processing
+## Features
+
+- **Sentiment Analysis**: Analyzes market sentiment from news and social media
+- **Technical Analysis**: Uses historical price patterns and technical indicators
+- **Fundamental Analysis**: Evaluates company financials and market position
+- **Forecasting**: Implements time series forecasting models
+- **Weighted Prediction**: Combines all analyses with configurable weights
+
+## Project Structure
+
+```
+.
+├── main.py                 # Main application entry point
+├── Sentiment_analysis/     # Sentiment analysis module
+├── forecasting/           # Time series forecasting module
+├── TechnicalAanalysis/    # Technical analysis module
+├── fundamental_analysis/  # Fundamental analysis module
+├── src/                  # Source code utilities
+└── Docs/                 # Documentation
+```
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Event-Driven-Stock-Market-Prediction-Using-Artificial-Intelligence.git
+cd Event-Driven-Stock-Market-Prediction-Using-Artificial-Intelligence
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Run the main script with a stock symbol:
+```bash
+python main.py
+```
+
+## Configuration
+
+The system uses weighted analysis where you can adjust the importance of each analysis type:
+- w_sen: Sentiment analysis weight
+- w_for: Forecasting weight
+- w_tec: Technical analysis weight
+- w_fun: Fundamental analysis weight
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
