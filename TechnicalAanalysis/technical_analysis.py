@@ -81,13 +81,23 @@ def technical_analysis(stock_code):
             score -= 15  # Possible Drop
 
         # Generate Recommendation
-        print(score)
-        if score >= -10:
+        # print(score)
+        if score >= 40:
             return 1
+        elif score >= 10:
+            return 0.5
         elif score <= -40:
-            return 1
+            return -1
+        elif score <= -10:
+            return -0.5
         else:
             return 0
 
     except Exception as e:
         return f"Error: {str(e)}"
+
+
+"""
+
+
+"""

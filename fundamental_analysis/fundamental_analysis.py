@@ -265,12 +265,11 @@ def fundamental_analysis(stock_code):
             return 1
         elif score >= 55:
             return 0.5
-        elif score >= 35:
+        elif score >= 40:
             return 0
         elif score >= 20:
             return -0.5
         else:
             return -1
-
     except Exception as e:
         return "Error"
