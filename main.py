@@ -5,8 +5,8 @@ Here's our first attempt at using data to create a table:
 import os
 import alpaca_trade_api as tradeapi
 
-ALPACA_API_KEY = "PK71KD6R1CVL2QCK3NPC"  # Set this in your environment or replace with string
-ALPACA_SECRET_KEY = "VDTK860mEcqSQYzXlzkeZDDW2RTb7L1tftMzb42F"
+ALPACA_API_KEY = ""  # Set this in your environment or replace with string
+ALPACA_SECRET_KEY = ""
 ALPACA_BASE_URL = "https://paper-api.alpaca.markets"  # For live trading, change to live URL
 
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, ALPACA_BASE_URL, api_version='v3')
